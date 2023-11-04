@@ -153,7 +153,8 @@ export default function SwaggerUI(opts) {
       },
       spec: {
         spec: "",
-        url: constructorConfig.url
+        // support Relative References
+        url: constructorConfig.url,
       },
       requestSnippets: constructorConfig.requestSnippets
     }, constructorConfig.initialState)
