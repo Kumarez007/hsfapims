@@ -123,7 +123,7 @@ export default class OperationContainer extends PureComponent {
 
   onResetClick = (pathMethod) => {
     const defaultRequestBodyValue = this.props.oas3Selectors.selectDefaultRequestBodyValue(...pathMethod)
-    this.props.oas3Actions.setRequestBodyValue({ value: defaultRequestBodyValue, pathMethod })
+    this.props.oas3Actions.setRequestBodyValue({ value: fromJS(JSON.parse(defaultRequestBodyValue)), pathMethod })
   }
 
   onExecute = () => {
